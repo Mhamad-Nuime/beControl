@@ -23,7 +23,7 @@ export type AppDirection = 'rtl' | 'ltr' | null;
   styleUrl: './lang-toggle.css',
 })
 export class LangToggle implements AfterViewInit {
-  langaugeService = inject(TranslateService);
+  langaugeService = inject(TranslateService); 
   document = inject(DOCUMENT);
 
   lang: WritableSignal<Language> = signal(null);
