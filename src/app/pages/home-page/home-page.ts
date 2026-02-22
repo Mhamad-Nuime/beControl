@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, ElementRef, signal, viewChild } from '@angular/core';
 import { SharedModule } from '../../shared/shared-module';
 import { HeroSection } from "../../sections/home-page-sections/hero-section/hero-section";
+import { AboutUsSection } from "../../sections/home-page-sections/about-us-section/about-us-section";
 
 @Component({
   selector: 'app-home-page',
-  imports: [SharedModule, HeroSection],
+  imports: [SharedModule, HeroSection, AboutUsSection],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
 })
