@@ -1,0 +1,24 @@
+{
+    "Wcm": "Welcome there",
+    "home": "home",
+    "divisions": "divisions",
+    "aboutUs": "about Us",
+    "contactUs": "contact Us",
+    "trustedPartner": "Your Trusted Partner in Industrial Transformation",
+    "industrialSolutions": "We provide integrated industrial solutions including oil and fuel tank systems, industrial control panels, motion control systems, and Industrial Internet of Things (IIoT). We work with you from design and installation to operation and maintenance to ensure safe and reliable performance in production environments.",
+    "practicalExperience": "Practical Experience",
+    "practicalExperienceDesc": "Executing projects with local and international companies",
+    "continuousSupport": "Continuous Support",
+    "continuousSupportDesc": "Consultations and maintenance after operation",
+    "standardCustomSolutions": "Standard and Custom Solutions",
+    "standardCustomSolutionsDesc": "Perfectly suited to your factory's needs",
+    "haveProjectOrInquiry": "Do you have a project or inquiry?",
+    "contactUsText": "Contact us",
+    "willRespondSoon": "and we will respond to you as soon as possible.",
+    "section" : {
+        "hero" : {
+            "title" : "Engineering Precision. Digital Intelligence. Industrial Impact.",
+            "text" : "We combine advanced analytics, high-accuracy engineering, and smart software technologies to deliver end-to-end solutions that strengthen performance and unlock new opportunities."
+        }
+    }
+}

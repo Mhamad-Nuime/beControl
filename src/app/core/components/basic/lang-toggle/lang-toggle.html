@@ -1,0 +1,14 @@
+<span>
+  <!-- <p-button [rounded]="true" [outlined]="true" (onClick)="toggleLanguage()">
+        <ng-template pTemplate="icon">
+            <img width="24" height="24" src="icons/translation.png" />
+        </ng-template>
+    </p-button> -->
+  <p-selectbutton
+    [options]="languages"
+    [(ngModel)]="lang"
+    optionLabel="label"
+    optionValue="value"
+    aria-labelledby="basic"
+  />
+</span>

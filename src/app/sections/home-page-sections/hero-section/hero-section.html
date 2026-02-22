@@ -1,0 +1,22 @@
+<div class="relative w-full h-screen overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <div
+      id="heroImage"
+      class="bg-[url('/image/hero.webp')] bg-cover bg-center absolute inset-0"
+    ></div>
+    <div
+      class="s absolute inset-0 bg-gradient-to-r from-background-black/0 to-black/50 opacity-100"
+    ></div>
+    <div class="absolute inset-0 bg-black/55"></div>
+  </div>
+  <div class="absolute inset-0">
+    <div class="px-3 mx-auto w-full md:w-3xl lg:w-5xl xl:w-7xl h-full">
+      <div class="h-full flex items-center">
+        <div class="md:max-w-3/5">
+          <h1 id="hero-title" class="text-primary font-bold text-6xl leading-20 mb-12">{{ 'section.hero.title' | translate }}</h1>
+          <p id="hero-text" class="text-white text-2xl">{{ 'section.hero.text' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

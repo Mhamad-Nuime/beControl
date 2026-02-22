@@ -1,0 +1,30 @@
+<div class="fixed top-0 inset-x-0 z-50 bc-ltr">
+  <div class="px-3 mx-auto w-full md:w-3xl lg:w-5xl xl:w-7xl">
+    <span class="flex items-center py-3 border-b border-primary">
+      <span>
+        <img width="200" src="image/full-logo.png" />
+      </span>
+      <span class="flex items-center justify-center grow">
+        <nav class="flex items-center gap-1 max-md:hidden rounded-xl">
+          @for(item of menuItems; track item.id){
+          <a
+            #linkElement
+            id="header-link"
+            class="p-2 flex items-center gap-1 text-surface-900 px-3 bg-primary-500 hover:bg-primary-300 active:bg-primary-400"
+            [class.rounded-s-xl]="$first"
+            [class.rounded-e-xl]="$last"
+            [routerLink]="item.routerLink"
+          >
+            <i [class]="item.icon + ' w-4 h-4'"></i>
+            <span>
+              {{ item.label | translate }}
+            </span>
+          </a>
+
+          }
+        </nav>
+      </span>
+      <app-lang-toggle></app-lang-toggle>
+    </span>
+  </div>
+</div>
