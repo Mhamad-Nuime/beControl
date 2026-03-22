@@ -1,0 +1,110 @@
+<div id="contact-form-trigger">
+  <div class="pt-30"></div>
+  <div
+    id="contact-section-wrapper"
+    class="p-4 md:p-10 mx-auto md:w-3xl lg:w-5xl xl:w-7xl bg-surface-200 rounded-xl"
+    style="background-image: url(image/form-bg.svg)"
+  >
+    <h1
+      class="m-auto w-fit mb-2 sm:mb-4 font-bold text-primary text-2xl sm:text-4xl contact-form-title"
+    >
+      {{ 'section.contact.title1' | translate }}
+    </h1>
+    <h5 class="m-auto w-fit text-2xl font-bold mb-1 sm:mb-2 text-primary-900 contact-form-title">
+      {{ 'section.contact.title2' | translate }}
+    </h5>
+    <p class="m-auto md:w-1/2 text-center max-sm:text-sm text-surface-600 mb-10 contact-form-title">
+      {{ 'section.contact.description' | translate }}
+    </p>
+    <div id="contact-form-wrapper">
+      <form [formGroup]="contactForm" (ngSubmit)="submit()" class="grid md:grid-cols-2 gap-5">
+        <!-- Email -->
+
+        <div class="mb-3">
+          <p-floatLabel>
+            <input
+              pInputText
+              id="email"
+              formControlName="email"
+              type="email"
+              [placeholder]="'section.contact.form.emailPlaceholder' | translate"
+              class="w-full"
+            />
+            <label for="email">
+              {{ 'section.contact.form.emailLabel' | translate }}
+            </label>
+            @if(contactForm.controls.email.dirty && contactForm.controls.email.invalid){
+            <small class="text-red-500">
+              {{ 'section.contact.form.emailInvalidMessage' | translate }}
+            </small>
+            }
+          </p-floatLabel>
+        </div>
+
+        <!-- Subject -->
+
+        <div class="mb-3">
+          <p-floatLabel>
+            <input
+              pInputText
+              id="subject"
+              formControlName="subject"
+              [maxlength]="120"
+              [placeholder]="'section.contact.form.subjectPlaceholder' | translate"
+              class="w-full"
+            />
+            <label for="subject">
+              {{ 'section.contact.form.subjectLabel' | translate }}
+            </label>
+          </p-floatLabel>
+        </div>
+
+        <!-- Message -->
+
+        <div class="md:col-span-2">
+          <p-floatLabel>
+            <textarea
+              pInputTextarea
+              id="message"
+              rows="5"
+              formControlName="message"
+              [maxlength]="1000"
+              [placeholder]="'section.contact.form.messagePlaceholder' | translate"
+              class="w-full"
+            ></textarea>
+
+            <label for="message">
+              {{ 'section.contact.form.messageLabel' | translate }}
+            </label>
+            <small class="text-muted">
+              {{ contactForm.controls.message.value?.length || 0 }}/1000
+            </small>
+          </p-floatLabel>
+        </div>
+
+        <!-- Submit -->
+
+        <button
+          pButton
+          [disabled]="contactForm.invalid"
+          type="submit"
+          class="w-fit"
+          [label]="'section.contact.form.sendMessage' | translate"
+        ></button>
+      </form>
+      <div class="mt-4 md:mt-10">
+        <div class="w-fit m-auto text-surface-600">
+          {{ 'section.contact.emailNote' | translate }}
+        </div>
+        <div class="flex justify-center">
+          <a
+            class="font-bold text-primary-800 hover:text-primary-600 active:text-primary-500"
+            href="mailTo:sales@becontrol-sy.com"
+          >
+            sales@becontrol-sy.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

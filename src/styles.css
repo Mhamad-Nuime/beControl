@@ -34,6 +34,7 @@ html {
 /* Fonts */
 body[dir='rtl'] {
   h1,
+  h1 > div,
   h2,
   h3,
   h4,
@@ -54,6 +55,7 @@ body[dir='rtl'] {
 
 body[dir='ltr'] {
   h1,
+  h1 > div,
   h2,
   h3,
   h4,
@@ -82,4 +84,16 @@ body *[lang='en']:is(h1, h2, h3, h4, h5, h6) {
   font-weight: 400 !important;
   font-optical-sizing: auto;
   font-style: normal;
+}
+.responsive-origin:dir(ltr){
+  transform-origin: right;
+}
+.responsive-origin:dir(rtl){
+  transform-origin: left;
+}
+.reverse-responsive-origin:dir(ltr){
+  transform-origin: left;
+}
+.reverse-responsive-origin:dir(rtl){
+  transform-origin: right;
 }

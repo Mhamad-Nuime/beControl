@@ -1,0 +1,14 @@
+<nav id="menu-header-link-wrapper" class="flex gap-2 xl:gap-4 max-md:hidden rounded-4xl">
+    @for(link of links; track $index){
+      <span
+      (click)="navTo(link.sectionId)"
+      class="menu-header-link-item flex items-center gap-3 px-2 py-2 rounded-4xl hover:bg-primary/20 active:bg-primary/40 cursor-pointer select-none transition-colors">
+        <span class="flex justify-center items-center size-7 bg-primary rounded-full transition-all menu-icon-wrapper">
+            <i [class]="`${link.icon} text-surface-700`"></i>
+        </span>
+        <p class="menu-header-link-item-text text-surface-200 active:text-primary">
+            {{link.label | translate}}
+        </p>
+      </span>
+    }
+</nav>

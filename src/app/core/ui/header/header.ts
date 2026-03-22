@@ -1,9 +1,12 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
 import { SharedModule } from '../../../shared/shared-module';
 import { MenuItem } from 'primeng/api';
-import { RouterLink, RouterLinkActive } from '@angular/router';
 import { LangToggle } from '../../components/basic/lang-toggle/lang-toggle';
 import { gsap } from 'gsap';
+import { links } from '../../../shared/home-page-links';
+import { Menu } from '../../../shared/services/menu';
+import { HeaderNavBar } from "../../components/header-nav-bar/header-nav-bar";
+
 
 export const sectionIds = {
   home: '#home',
@@ -14,11 +17,13 @@ export const sectionIds = {
 
 @Component({
   selector: 'app-header',
-  imports: [SharedModule, LangToggle, RouterLink],
+  imports: [SharedModule, LangToggle, HeaderNavBar],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
 export class Header implements AfterViewInit {
+  menuService = inject(Menu);
+  links = links;
   menuItems: MenuItem[] = [
     {
       id: '1',
@@ -46,12 +51,32 @@ export class Header implements AfterViewInit {
     },
   ];
   ngAfterViewInit(): void {
-    gsap.from('#header-link', {
+    gsap.from('.menu-header-link-item', {
       y: -100,
       opacity: 0,
       duration: 1,
       stagger: 0.2,
       ease: "bounce.out"
     });
+  }
+
+  @ViewChild('menu') menu!: ElementRef;
+  @ViewChild('meneSwitcher') meneSwitcher!: ElementRef;
+  @HostListener('document:click', ['$event'])
+  onClick(event: MouseEvent) {
+    if (
+      !this.menu.nativeElement.contains(event.target) &&
+      !this.meneSwitcher.nativeElement.contains(event.target) 
+    ) {
+      this.menuService.status = 'CLOSED';
+    }
+  }
+  moveToSection(sectionId : any){
+    gsap.to(window, {
+      duration: 1,            // 1 second
+      scrollTo: `#${sectionId}`,
+      ease: "power2.inOut"
+    });
+    this.menuService.hide()
   }
 }

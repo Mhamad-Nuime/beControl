@@ -1,59 +1,18 @@
-<app-hero-section/>
-<app-about-us-section/>
-<!-- 
-<div class="px- 3 mx-auto w-full md:w-3xl lg:w-5xl xl:w-7xl">
-    <div class="md:grid grid-cols-12 max-md:relative max-md:text-white">
-      <div class="col-span-7 bg-card py-2 sm:py-6 lg:py-10 flex flex-col max-md:absolute max-md:inset-0">
-        <main class="grow-1 flex flex-col py-4 gap-4 relative">
-          <h2 class="text-2xl font-bold text-primary">{{ 'trustedPartner' | translate }}</h2>
-          <p class="text-lg leading-relaxed">
-            {{ 'industrialSolutions' | translate }}
-          </p>
-          <ul class="grid gap-2 text-base opacity-90">
-            <li><strong>{{ 'practicalExperience' | translate }}</strong> — {{ 'practicalExperienceDesc' | translate }}</li>
-            <li><strong>{{ 'continuousSupport' | translate }}</strong> — {{ 'continuousSupportDesc' | translate }}</li>
-            <li><strong>{{ 'standardCustomSolutions' | translate }}</strong> — {{ 'standardCustomSolutionsDesc' | translate }}</li>
-          </ul>
-          <p class="text-base">
-            {{ 'haveProjectOrInquiry' | translate }}
-            <span class="txt-primary relative">
-              <span>{{ 'contactUsText' | translate }}</span>
-              <span class="absolute top-6 right-5">
-                <img class="max-w-max max-sm:hidden" width="200" src="image/dashed-arrow.svg" />
-              </span>
-            </span>
-            {{ 'willRespondSoon' | translate }}
-          </p>
-        </main>
-        <footer class="flex xl:justify-center">
-          <div class="flex flex-col gap-4 relative">
-            <div class="flex gap-4 items-center">
-              <span class="material-symbols-rounded"> mail </span>
-              <a href="mail:info@becontrolsolutions.com"
-                >info@<span class="txt-primary">becontrolsolutions</span>.com</a
-              >
-            </div>
-            <div class="flex gap-4 items-center">
-              <span class="material-symbols-rounded"> phone_in_talk </span>
-              <a href="tel:+963944441946">+963 944 441 946</a>
-            </div>
-            <div></div>
-          </div>
-        </footer>
-      </div>
-      <div class="col-span-5 relative flex justify-center">
-        <video
-          #video
-          autoplay
-          loop
-          [muted]="true"
-          type="video/webm"
-          style="background-color: rgb(0 0 0 / 25%)"
-          class="w-110 h-150 rounded-xl object-cover"
-          [src]="videoSrc()"
-        ></video>
-        <div class="absolute w-full inset-0 max-md:bg-black max-md:opacity-60"></div>
-      </div>
+<div id="smooth-wrapper" class="select-none">
+  <div id="smooth-content">
+    <app-hero-section />
+    <div id="bc-trigger" class="h-screen">
+      <app-about-us-section/>
     </div>
-    
-  </div> -->
+    <app-divisions-section/>
+    <app-industries-served />
+    <app-our-projects-section />
+    <div id="small-sections-trigger" class="relative h-screen">
+      <app-customers-section />
+      <app-partners-section />
+      <app-certifications-section />
+    </div>
+    <app-contact-section />
+    <app-footer />
+  </div>
+</div>

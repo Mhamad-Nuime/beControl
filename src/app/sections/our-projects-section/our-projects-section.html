@@ -1,0 +1,21 @@
+<div
+  id="projects-section-trigger"
+  class="bg-blue-900"
+>
+  <div class="px-3 mx-auto w-full md:w-3xl lg:w-5xl xl:w-7xl">
+    <div class="pt-28 flex flex-col">
+     <div>
+        <h1
+        id="projects-section-title"
+        class="w-fit text-white font-bold text-4xl sm:text-6xl mb-10 reverse-responsive-origin"
+      >
+        {{ 'section.projects.title' | translate }}
+      </h1>
+     </div>
+      <div class="">
+          <app-project-card index="1" section="iiotProject" [images]="['served-1.webp', 'served-2.webp', 'served-3.webp']" />
+          <app-project-card index="2" section="gasTankProject" [images]="['served-1.webp', 'served-2.webp', 'served-3.webp']" />
+      </div>
+    </div>
+  </div>
+</div>

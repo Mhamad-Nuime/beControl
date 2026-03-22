@@ -1,0 +1,31 @@
+<div class="absolute inset-0 h-screen small-section-trigger">
+  <div class="absolute inset-0 bg-surface-100"></div>
+  <div
+    class="relative px-3 mx-auto w-screen md:w-3xl lg:w-5xl xl:w-7xl h-full flex flex-col justify-center"
+  >
+    <div class="mb-8">
+      <h6 class="m-auto w-fit text-primary md:text-xl mb-4 font-bold small-section-title">
+        {{ 'section.technologyPartnerships.title' | translate }}
+      </h6>
+      <h1
+        class="m-auto w-fit text-2xl font-bold text-primary-800 md:text-4xl mb-3 small-section-subtitle"
+      >
+        {{ 'section.technologyPartnerships.subtitle' | translate }}
+      </h1>
+      <p class="m-auto w-fit text-center text-primary-900 small-section-description">
+        {{ 'section.technologyPartnerships.description' | translate }}
+      </p>
+    </div>
+    <div class="grid grid-cols-4 lg:grid-cols-6 gap-6">
+      @for(item of items; track item.id){
+      <span class="small-section-img-card">
+        <div
+          class="flex justify-center items-center bg-black/1 p-4 overflow-hidden rounded-xl transition-all shadow-md hover:bg-black/10 hover:shadow-xl hover:-translate-y-1"
+        >
+          <img class="w-24 h-10 sm:h-20 md:h-20" [src]="item.img" alt="" />
+        </div>
+      </span>
+      }
+    </div>
+  </div>
+</div>

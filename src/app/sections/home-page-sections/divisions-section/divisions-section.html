@@ -1,0 +1,52 @@
+<div id="divisions-section-trigger" class="relative h-screen main-flow-item origin-top">
+  <div style="background-color: rgb(0, 29, 52)" class="absolute inset-0 z-0"></div>
+  <div class="relative">
+    <div class="px-3 mx-auto w-full md:w-3xl lg:w-5xl xl:w-7xl h-screen">
+      <div class="flex h-full relative">
+        <div class="w-21 flex items-center">
+          <h1
+            id="divisions-section-title"
+            class="text-white font-bold text-4xl sm:text-6xl"
+            style="writing-mode: sideways-lr"
+          >
+            {{ 'section.divisions.title' | translate }}
+          </h1>
+        </div>
+        <div class="flex items-center ps-2 grow-1">
+          <span id="divisions-section-cards" class="text-white relative">
+            <app-divition-card 
+            index="1"
+            section="engineering"
+            styleClass="bg-yellow-500"
+            />
+            <app-divition-card 
+            index="2"
+            section="maintenance"
+            styleClass="bg-green-500 absolute top-2 "
+            />
+            <app-divition-card 
+            index="3"
+            section="automation"
+            styleClass="bg-red-500 absolute top-4 "
+            />
+            <app-divition-card 
+            index="4"
+            section="epc"
+            styleClass="bg-blue-500 absolute top-6"
+            />
+            <app-divition-card 
+            index="5"
+            section="manufacturing"
+            styleClass="bg-orange-500 absolute top-8"
+            />
+            <app-divition-card 
+            index="6"
+            section="safety"
+            styleClass="bg-purple-500 absolute top-10"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

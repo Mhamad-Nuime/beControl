@@ -1,14 +1,20 @@
-<span>
-  <!-- <p-button [rounded]="true" [outlined]="true" (onClick)="toggleLanguage()">
-        <ng-template pTemplate="icon">
-            <img width="24" height="24" src="icons/translation.png" />
-        </ng-template>
-    </p-button> -->
+<span
+  class="flex items-center justify-center p-2 rounded-full transition-colors hover:bg-primary/20 active:bg-primary/40 select-none"
+  (click)="toggle($event)"
+>
+  <div class="size-5 cursor-pointer">
+    <img class="object-cover" src="icons/lang.png" alt="" />
+  </div>
+</span>
+
+<p-popover #op>
   <p-selectbutton
+    styleClass="bc-ltr"
     [options]="languages"
     [(ngModel)]="lang"
+    (ngModelChange)="reloadPage($event)"
     optionLabel="label"
     optionValue="value"
     aria-labelledby="basic"
   />
-</span>
+</p-popover>

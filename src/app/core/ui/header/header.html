@@ -1,30 +1,62 @@
-<div class="fixed top-0 inset-x-0 z-50 bc-ltr">
-  <div class="px-3 mx-auto w-full md:w-3xl lg:w-5xl xl:w-7xl">
-    <span class="flex items-center py-3 border-b border-primary">
-      <span>
-        <img width="200" src="image/full-logo.png" />
-      </span>
-      <span class="flex items-center justify-center grow">
-        <nav class="flex items-center gap-1 max-md:hidden rounded-xl">
-          @for(item of menuItems; track item.id){
-          <a
-            #linkElement
-            id="header-link"
-            class="p-2 flex items-center gap-1 text-surface-900 px-3 bg-[#00f3ffb5] hover:bg-primary-300 active:bg-primary-400"
-            [class.rounded-s-xl]="$first"
-            [class.rounded-e-xl]="$last"
-            [routerLink]="item.routerLink"
+<div class="fixed top-0 inset-x-0 z-50">
+  <div id="header-background" class="bc-ltr px-3 mx-auto w-full md:w-3xl lg:w-5xl xl:w-7xl md:rounded-2xl">
+    <div class="border-b border-primary">
+      <span class="flex items-center py-3">
+        <span>
+          <img width="150" src="image/full-logo.png" />
+        </span>
+        <span class="flex items-center justify-center grow">
+          <span class="max-lg:hidden">
+            <app-header-nav-bar
+            (navigate)="moveToSection($event)"
+            />
+          </span>
+        </span>
+        <span class="flex gap-1 sm:gap-4">
+          <app-lang-toggle></app-lang-toggle>
+          <div class="bg-primary w-[1px] rounded-full md:hidden"></div>
+          <span
+            #meneSwitcher
+            class="md:hidden flex items-center justify-center p-2 rounded-full transition-colors hover:bg-primary/20 active:bg-primary/40 select-none"
           >
-            <i [class]="item.icon + ' w-4 h-4'"></i>
-            <span>
-              {{ item.label | translate }}
-            </span>
-          </a>
-
-          }
-        </nav>
+            <div class="size-5 cursor-pointer" (click)="menuService.toggle()">
+              <img
+                class="object-cover"
+                [src]="
+                  (menuService.status$ | async) == 'OPENED'
+                    ? 'icons/menu-open.png'
+                    : 'icons/menu-closed.png'
+                "
+                alt=""
+              />
+            </div>
+          </span>
+        </span>
       </span>
-      <app-lang-toggle></app-lang-toggle>
-    </span>
+      <span class="lg:hidden">
+        <app-header-nav-bar
+        (navigate)="moveToSection($event)"
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    #menu
+    class="panel w-full bg-surface-300 rounded-b-2xl shadow-md"
+    [class.open]="(menuService.status$ | async) == 'OPENED'"
+  >
+    <nav class="p-8 flex flex-col gap-4 select-none">
+      @for (link of links; track $index) {
+      <div
+        class="flex items-center gap-4 transition-colors duration-300 hover:bg-primary-700/25 active:bg-primary-700/40 py-2 px-4 rounded-xl"
+        (click)="moveToSection(link.sectionId)"
+      >
+        <div class="size-10 bg-primary flex justify-center items-center rounded-full">
+          <i [class]="link.icon + ' text-surface-600'"></i>
+        </div>
+        <p>{{ link.label | translate }}</p>
+      </div>
+      }
+    </nav>
   </div>
 </div>

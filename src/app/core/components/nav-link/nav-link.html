@@ -1,0 +1,10 @@
+<span [class]="`${styleClass()} ` + 'flex gap-2 items-center cursor-pointer'">
+  @if(icon()){
+  <span class="bg-primary text-surface-500 rounded-full size-7 flex items-center justify-center">
+    <i [class]="icon()"></i>
+  </span>
+  }
+  <span>
+    {{ label() | translate }}
+  </span>
+</span>

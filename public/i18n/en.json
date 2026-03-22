@@ -15,6 +15,7 @@
   "haveProjectOrInquiry": "Do you have a project or inquiry?",
   "contactUsText": "Contact us",
   "willRespondSoon": "and we will respond to you as soon as possible.",
+  "seeMore": "See More",
   "section": {
     "hero": {
       "title": "Engineering Precision. Digital Intelligence. Industrial Impact.",
@@ -22,7 +23,207 @@
     },
     "aboutus": {
       "title": "About Us",
-      "text": "Be Control, founded in 2020, is a leading Syrian Engineering, Procurement, and Construction (EPC) company specializing in advanced industrial solutions. With decades of expertise in electronics, electrical power systems, and the information industry, Be Control integrates classic industrial control with modern technologies to deliver smart, reliable, and future-ready automation solutions. Our work spans industrial automation, IIoT integration, digital transformation, and custom-designed control systems built to meet the evolving needs of today’s industries. We are committed to innovation, quality, and long-term value for our clients."
+      "text": {
+        "paragraph_1": "Be Control, founded in 2020, is a leading Syrian Engineering, Procurement, and Construction (EPC) company specializing in advanced industrial solutions.",
+        "paragraph_2": "With decades of expertise in electronics, electrical power systems, and the information industry, Be Control integrates classic industrial control with modern technologies to deliver smart, reliable, and future-ready automation solutions.",
+        "paragraph_3": "Our work spans industrial automation, IIoT integration, digital transformation, and custom-designed control systems built to meet the evolving needs of today’s industries.",
+        "paragraph_4": "We are committed to innovation, quality, and long-term value for our clients."
+      }
+    },
+    "divisions": {
+      "title": "Divisions",
+      "text": "",
+      "whatItIs": "What It Is",
+      "problemSolved": "Problem Solved",
+      "cards": {
+        "solutions": {
+          "engineering": {
+            "title": "Engineering Solutions",
+            "whatItIs": "Our Engineering Division provides end-to-end design, analysis, and implementation support across mechanical, electrical, civil, and process engineering disciplines. We deliver innovative, safe, and reliable solutions that meet global industry standards.",
+            "problemSolved": [
+              "Inefficient or outdated designs that slow down production",
+              "Lack of technical expertise for complex projects",
+              "High downtime caused by engineering errors or poor integration",
+              "Challenges meeting industry compliance and safety requirements"
+            ],
+            "benefits": [
+              "Optimized system performance and reduced operational costs",
+              "Engineering designs tailored to your exact workflows",
+              "Faster project delivery with minimal rework",
+              "Full compliance with international codes and standards"
+            ]
+          },
+          "maintenance": {
+            "title": "Industrial Maintenance Services",
+            "whatItIs": "We provide preventive, corrective, and predictive maintenance services for industrial equipment and infrastructure. Using modern diagnostic tools and experienced technicians, we ensure uninterrupted operations and extended asset lifespan.",
+            "problemSolved": [
+              "Frequent breakdowns and unscheduled downtime",
+              "Aging equipment that impacts productivity",
+              "High maintenance costs due to reactive repairs",
+              "Lack of skilled technicians for specialized machinery"
+            ],
+            "benefits": [
+              "Reduced downtime and increased reliability",
+              "Longer equipment lifespan",
+              "Lower maintenance cost through predictive strategies",
+              "Immediate technical support from certified experts"
+            ]
+          },
+          "automation": {
+            "title": "Automation & Control Systems",
+            "whatItIs": "We design, integrate, and program advanced automation technologies including PLC, SCADA, DCS, IoT, and robotics. Our team delivers seamless control systems tailored to your operational needs.",
+            "problemSolved": [
+              "Inefficient manual processes",
+              "High labor costs and human errors",
+              "Difficulty monitoring large or complex facilities",
+              "Lack of real-time data for decision-making"
+            ],
+            "benefits": [
+              "Increased productivity through automated workflows",
+              "Improved accuracy, consistency, and speed",
+              "Real-time monitoring and optimized resource usage",
+              "Scalable systems ready for Industry 4.0 transformation"
+            ]
+          },
+          "epc": {
+            "title": "EPC Support",
+            "whatItIs": "We assist EPC contractors with engineering design, procurement coordination, site supervision, commissioning, and technical documentation. Our team provides expertise to ensure smooth project delivery.",
+            "problemSolved": [
+              "Limited internal engineering resources",
+              "Complex multi-vendor procurement processes",
+              "Project delays due to poor coordination",
+              "Technical challenges during installation and commissioning"
+            ],
+            "benefits": [
+              "Faster project delivery with integrated support",
+              "Reduced cost through efficient procurement",
+              "Fewer errors and rework",
+              "Clear communication between all project stakeholders"
+            ]
+          },
+          "manufacturing": {
+            "title": "Manufacturing Solutions",
+            "whatItIs": "We offer specialized manufacturing solutions including production line optimization, process engineering, material handling systems, and lean manufacturing implementation.",
+            "problemSolved": [
+              "Inefficient production lines causing bottlenecks",
+              "High waste and low product quality",
+              "Difficulty scaling production",
+              "Lack of visibility into manufacturing performance"
+            ],
+            "benefits": [
+              "Higher output with existing resources",
+              "Improved product quality and consistency",
+              "Reduced waste and operating costs",
+              "Streamlined workflows aligned with lean principles"
+            ]
+          },
+          "safety": {
+            "title": "Safety & Compliance Services",
+            "whatItIs": "Our HSE specialists deliver safety audits, risk assessments, training programs, and compliance solutions aligned with local and international standards. We help companies build proactive safety cultures.",
+            "problemSolved": [
+              "High-risk environments leading to accidents",
+              "Non-compliance with safety regulations",
+              "Lack of proper training for workers",
+              "Increased operational liability"
+            ],
+            "benefits": [
+              "Safer workplace with reduced incidents",
+              "Full compliance with regulatory authorities",
+              "Improved workforce awareness and performance",
+              "Stronger corporate reputation and reduced legal risks"
+            ]
+          }
+        }
+      }
+    },
+    "industriesServed": {
+      "title": "Industries Served",
+      "oilGas": {
+        "title": "Oil & Gas",
+        "content": "We provide comprehensive engineering and technical support for upstream, midstream, and downstream operations. Our services focus on enhancing safety, optimizing asset performance, reducing downtime, and ensuring compliance with international industry standards."
+      },
+      "chickenPoultry": {
+        "title": "Chicken Poultry",
+        "content": "We support poultry farms and processing facilities with modern solutions that enhance animal welfare, improve biosecurity, optimize production efficiency, and reduce operational costs. Our expertise helps producers achieve consistent, high-quality output while maintaining strict hygiene and food-safety standards."
+      },
+      "productionLines": {
+        "title": "Production Lines",
+        "content": "We deliver engineering, automation, and optimization solutions for a wide range of production lines. From equipment selection to layout design and process automation, we help manufacturers increase throughput, improve product quality, and minimize waste across their operations."
+      }
+    },
+    "projects": {
+      "title": "Our Projects",
+      "problem": "Problem",
+      "addedValue": "Added Value",
+      "iiotProject": {
+        "title": "Smart IIoT Integration for Real-Time Production Monitoring",
+        "problem": "The client lacked real-time visibility into machine performance, relied on manual data collection, and suffered from frequent unplanned downtime due to undetected equipment issues.",
+        "addedValue": "By integrating IIoT sensors and a real-time monitoring platform, the client gained immediate visibility into machine performance, energy usage, and equipment health. This upgrade eliminated manual data collection, reduced unexpected downtime, and enabled predictive maintenance, resulting in higher efficiency and lower operational costs."
+      },
+      "gasTankProject": {
+        "title": "Comprehensive Integrity Assessment & Safety Upgrade for Gas Storage Tank",
+        "problem": "The client faced significant safety concerns due to corrosion risks, outdated monitoring systems, and the urgent need to comply with updated industry safety regulations.",
+        "addedValue": "Through advanced inspection, ultrasonic testing, and safety system enhancements, the client improved the structural reliability and lifespan of their gas storage tank. The added value came from early detection of corrosion, upgraded monitoring controls, and full compliance with safety standards, significantly reducing risks and increasing operational safety."
+      }
+    },
+    "industryRecognition": {
+      "title": "Industry Recognition",
+      "subtitle": "Trusted By Global Leaders",
+      "description": "Partnering with industry giants to deliver exceptional results."
+    },
+    "technologyPartnerships": {
+      "title": "Technology Partnerships",
+      "subtitle": "Partner With Technology Pioneers",
+      "description": "Leveraging cutting-edge technology from world-leading innovators."
+    },
+    "qualityAssurance": {
+      "title": "Quality Assurance",
+      "subtitle": "Our Certifications",
+      "description": "We adhere to the strictest international standards for quality and safety.",
+      "certifications": [
+        {
+          "title": "ISO 9001",
+          "description": "Certified quality management system ensuring reliable engineering and automation services."
+        },
+        {
+          "title": "ISO 45001",
+          "description": "International standard for occupational health and safety management."
+        },
+        {
+          "title": "ISO 14001",
+          "description": "Environmental management certification for sustainable industrial operations."
+        },
+        {
+          "title": "IEC 61508",
+          "description": "Functional safety standard for electrical and electronic safety-related systems."
+        }
+      ]
+    },
+    "contact": {
+      "title1": "Have a project in mind?",
+      "title2": "Let's build it together.",
+      "description": "Our team of experts is ready to help transform your ideas into reality using the latest technologies and global standards.",
+      "emailNote": "* Clicking \"Send Message\" will open your default email client with a pre-filled email.",
+      "directContact": "Or contact us directly at:",
+      "form": {
+        "emailLabel": "Email Address *",
+        "emailPlaceholder": "your@email.com",
+        "emailInvalidMessage" : "Invalid Email",
+        "subjectLabel": "Subject *",
+        "subjectPlaceholder": "What is this regarding?",
+
+        "messageLabel": "Message *",
+        "messagePlaceholder": "Tell us about your project, timeline, and requirements...",
+
+        "sendMessage": "Send Message"
+      }
     }
+  },
+  "footer" : {
+     "tagline": "Leading the way in integrated solutions, we harness science and technology to shape a smarter, brighter future.",
+     "quickLinks" : "Quick Links",
+     "info" : "Contact Info",
+     "location" : "Sahnaya, Rif Damascus, SYRIA",
+     "trail" : "Amin Al-tasseh Establishment for Trading"
   }
 }

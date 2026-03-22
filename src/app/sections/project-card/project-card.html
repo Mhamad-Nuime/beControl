@@ -1,0 +1,45 @@
+<div [id]="'project-card-' + index()" [class]="'text-white project-card-trigger ' + styleClass()">
+  <div class="pb-8 flex flex-col">
+    <div class="">
+      <div class="pb-4">
+        <h1 [id]="'project-card-title-' + index()" class="project-card-title text-2xl m-auto w-fit mb-6">
+          {{`section.projects.${section()}.title` | translate}}
+        </h1>
+        <table class="project-card-table" [id]="`project-card-table-${index()}`">
+          <tr class="border-b">
+            <th class="bg-black/10 w-24">
+              <div class="">{{ 'section.projects.problem' | translate }}</div>
+            </th>
+            <td class="ps-2">
+              <p [id]="'project-card-problem-' + index()" class="project-card-problem text-white mb-2 inline-block">
+                {{`section.projects.${section()}.problem` | translate}}
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th class="bg-black/10">
+              <div class="">{{ 'section.projects.addedValue' | translate }}</div>
+            </th>
+            <td class="ps-2">
+              <p [id]="'project-card-addedValue-' + index()" class="project-card-addedValue text-white inline-block">
+                {{`section.projects.${section()}.addedValue` | translate}}
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="project-card-img-list overflow-hidden grid grid-cols-2 gap-2">
+      @for(img of images(); track img){
+      <div
+        [class]="'rounded-md overflow-hidden max-h-100 col-span-2'"
+        [class.md:col-span-1]="!$first"
+        [ngClass]="[`project-card-img-${index()}`]"
+        [id]="'project-card-img-' + index() + '-' + $index"
+      >
+        <img class="project-card-img size-full object-cover" [src]="`image/${img}`" alt="" />
+      </div>
+      }
+    </div>
+  </div>
+</div>

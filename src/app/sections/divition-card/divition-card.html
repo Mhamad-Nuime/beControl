@@ -1,0 +1,44 @@
+<div [id]="'division-card-'+ index()" [class]="'divition-card rounded-xl p-4  ' + styleClass() ">
+    <h2 class="pb-4 text-2xl font-bold text-black">
+      {{ `section.divisions.cards.solutions.${section()}.title`| translate }}
+    </h2>
+    <div class="flex flex-col md:flex-row gap-2 text-black h-100">
+        <div class="md:w-1/2 relative">
+          <div class="flex items-center gap-1">
+            <h5
+              style="writing-mode: sideways-lr"
+              class="bg-black/40 self-stretch text-white text-center rounded-t-md px-6"
+            >
+              {{ 'section.divisions.whatItIs' | translate }}
+            </h5>
+            <p>
+              {{ `section.divisions.cards.solutions.${section()}.whatItIs` | translate }}
+            </p>
+          </div>
+          <div class="flex items-center gap-1">
+            <h5
+              style="writing-mode: sideways-lr"
+              class="bg-black/40 self-stretch text-white text-center px-2 rounded-b-md px-6"
+            >
+              {{ 'section.divisions.problemSolved' | translate }}
+            </h5>
+            @let paragraphs = `section.divisions.cards.solutions.${section()}.problemSolved` |
+            translate;
+            <div class="pt-2 flex flex-col gap-1 rounded-md p-2">
+              @for (p of paragraphs; track $index) {
+              <div class="flex gap-1 items-center">
+                <div class="w-2 h-2 rounded-full bg-surface-800"></div>
+                <p class="text-surface-800 !font-bold text-xs">{{ p }}</p>
+              </div>
+              }
+            </div>
+          </div>
+          <span class="absolute -bottom-14 inset-x-2 md:bottom-0 md:inset-x-0">
+            <p-button  styleClass="w-1/2 text-black" label="{{'seeMore' | translate}}" [rounded]="true" [pt]="cardBtnPt" />
+          </span>
+        </div>
+        <div class="h-full md:w-1/2 overflow-hidden rounded-xl">
+          <img class="object-cover max-md:w-full h-full" src="image/card_1.webp" alt="" />
+        </div>
+    </div>
+  </div>

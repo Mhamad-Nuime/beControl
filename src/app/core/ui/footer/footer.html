@@ -1,1 +1,87 @@
-<p>footer works!</p>
+<div 
+id="footer-link"
+class="bg-surface-200 p-4 md:p-10 !pb-2 mt-10"
+style="background-image: url(image/background.svg);"
+>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+  <!-- <div class="flex gap-10 flex-wrap"> -->
+    <div class="w-xs">
+      <div class="w-45">
+        <img src="icons/logo-signed.webp" alt="" />
+      </div>
+      <p class="text-md font-bold text-surface-700 mt-5">
+        {{ 'footer.tagline' | translate }}
+      </p>
+    </div>
+    <div class="">
+      <h1 class="font-bold text-primary-900 mb-4">{{ 'footer.quickLinks' | translate }}</h1>
+      <nav class="flex flex-col gap-2 ps-2">
+        @for (link of links; track $index) {
+        <app-nav-link
+          [icon]="link.icon"
+          [label]="link.label"
+          [sectionId]="link.sectionId"
+          [styleClass]="link.styleClass"
+        />
+        }
+      </nav>
+    </div>
+    <div class="">
+      <h1 class="font-bold text-primary-900 mb-4">{{ 'footer.info' | translate }}</h1>
+      <div class="flex flex-col gap-2 ps-2">
+        <span class="flex gap-2 items-center cursor-pointer">
+          <span
+            class="bg-primary text-surface-500 rounded-full size-7 flex items-center justify-center"
+          >
+            <i class="pi pi-map-marker"></i>
+          </span>
+          <span>
+            {{ 'footer.location' | translate }}
+          </span>
+        </span>
+        <span class="flex gap-2 items-center cursor-pointer">
+          <span
+            class="bg-primary text-surface-500 rounded-full size-7 flex items-center justify-center"
+          >
+            <i class="pi pi-phone"></i>
+          </span>
+
+          <a style="direction: ltr" href="tel:+963116917409">+963 11 691 7409</a>
+        </span>
+        <span class="flex gap-2 items-center cursor-pointer">
+          <span
+            class="bg-primary text-surface-500 rounded-full size-7 flex items-center justify-center"
+          >
+            <i class="pi pi-phone"></i>
+          </span>
+
+          <a style="direction: ltr" href="tel:+963938112059">+963 938 11 2059</a>
+        </span>
+        <span class="flex gap-2 items-center cursor-pointer">
+          <span
+            class="bg-primary text-surface-500 rounded-full size-7 flex items-center justify-center"
+          >
+            <i class="pi pi-whatsapp"></i>
+          </span>
+
+          <a style="direction: ltr" href="https://wa.me/963967521129">+963 967 52 1129</a>
+        </span>
+        <span class="flex gap-2 items-center cursor-pointer">
+          <span
+            class="bg-primary text-surface-500 rounded-full size-7 flex items-center justify-center"
+          >
+            <i class="pi pi-envelope"></i>
+          </span>
+
+          <a style="direction: ltr" href="mailto:sales@becontrol-sy.com">sales@becontrol-sy.com</a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="mt-8">
+    <p class="w-fit m-auto text-surface-600">
+        {{'footer.trail' | translate}}
+        <span style="direction: ltr !important;">&copy;2026</span>
+    </p>
+  </div>
+</div>

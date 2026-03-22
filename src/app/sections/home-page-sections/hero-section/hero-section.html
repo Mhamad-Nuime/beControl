@@ -1,4 +1,4 @@
-<div class="relative w-full h-screen overflow-hidden">
+<div id="home-section-link" class="relative w-full h-screen overflow-hidden">
   <div class="absolute inset-0 z-0">
     <div
       id="heroImage"
@@ -11,10 +11,14 @@
   </div>
   <div class="absolute inset-0">
     <div class="px-3 mx-auto w-full md:w-3xl lg:w-5xl xl:w-7xl h-full">
-      <div class="h-full flex items-center">
+      <div class="h-full mt-50">
         <div class="md:max-w-3/5">
-          <h1 id="hero-title" class="text-primary font-bold text-6xl leading-20 mb-12">{{ 'section.hero.title' | translate }}</h1>
-          <p id="hero-text" class="text-white text-2xl">{{ 'section.hero.text' | translate }}</p>
+          <h1 id="hero-title" class="text-primary font-bold text-4xl md:text-6xl leading-15 md:leading-20 mb-12">
+            {{ 'section.hero.title' | translate }}
+          </h1>
+          <span class="grow-1 h-25">
+            <app-auto-writed-paragraph text="section.hero.text" />
+          </span>
         </div>
       </div>
     </div>
